@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Išdėstymas su float</title>
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+		}
+		#pradzia, #pabaiga {
+			background-color: cornflowerblue;
+			color: white;
+			text-align: center;
+		}
+		#pradzia {
+			padding: 2em;
+			margin: 0;
+		}
+		#pabaiga {
+			padding: 1em;
+		}
+		#turinys {
+			overflow: auto;
+		}
+		#turinys > div {
+			padding: 1em;
+			margin: 2em;
+		}
+		#pirmas {
+			background-color: beige;
+			float: left;
+			width: 30%;
+		}
+		#antras {
+			background-color: chartreuse;
+			float: right;
+			width: 60%;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="pradzia">Pavadinimas</h1>
+	
+	<div id="turinys">
+		<div id="pirmas">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, atque quas? At magni ut accusantium mollitia praesentium hic perferendis quo.
+			</p>
+			<ul>
+				<li><a href="#">nuoroda</a></li>
+				<li><a href="#">nuoroda</a></li>
+				<li><a href="#">nuoroda</a></li>
+				<li><a href="#">nuoroda</a></li>
+				<li><a href="#">nuoroda</a></li>
+			</ul>
+		</div>
+		<div id="antras">
+			<h2>turinys</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ratione, qui aspernatur cumque, quia sunt fuga? Aliquam, voluptatibus possimus aliquid. Aliquid perspiciatis itaque, numquam deserunt ullam aspernatur eaque maiores quasi.</p>
+			<p>Praesentium quidem quae officiis, vero deleniti explicabo omnis voluptatibus ullam! Ratione quis iusto harum tenetur ducimus porro maiores quae accusamus impedit vel, incidunt quos id adipisci consequatur at a doloremque.</p>
+			<p>Neque nostrum autem sequi officiis repellat eum accusamus, explicabo illo recusandae accusantium doloremque mollitia, similique sapiente qui. Sint, itaque iste veniam, voluptatum praesentium similique a autem, nulla suscipit laborum cupiditate.</p>
+		</div>
+	</div>
+	
+	<p id="pabaiga">footeris</p>
+</body>
+</html>
