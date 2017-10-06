@@ -1,0 +1,10 @@
+body {
+	background-color: aquamarine;
+}
+
+div {
+	background-color: bisque;
+	max-width: 85%;
+	margin: 5em auto;
+	border: 5px solid black;
+}
