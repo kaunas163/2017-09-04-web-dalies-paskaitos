@@ -8,3 +8,24 @@ div {
 	margin: 5em auto;
 	border: 5px solid black;
 }
+
+#blokas1 {
+	border-radius: 5px;
+	box-shadow: 0 0 25px red;
+}
+
+#blokas2 {
+	padding: 5em;
+}
+
+#blokas3 {
+	padding: 5em 0;
+}
+
+#blokas4 {
+	padding: 0 5em 1em;
+}
+
+#blokas5 {
+	padding: 0 0 5em 0;
+}
