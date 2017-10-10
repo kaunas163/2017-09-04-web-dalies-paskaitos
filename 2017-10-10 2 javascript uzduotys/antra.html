@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Antra užduotis</title>
+</head>
+<body>
+	<p>Įveskite du skaičius:</p>
+	
+	<form id="skaiciai">
+		<input type="number" min="0" id="pirmasSk">
+		<input type="number" min="0" id="antrasSk">
+		<input type="submit" value="Skaičiuoti">
+	</form>
+	
+	<div id="skaiciavimai"></div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		$("#skaiciai").on("submit", function(e){
+			e.preventDefault();
+			
+			var pirmas = parseInt($("#pirmasSk").val());
+			var antras = parseInt($("#antrasSk").val());
+			
+			var suma = pirmas + antras;
+			var skirtumas = pirmas - antras;
+			var sandauga = pirmas * antras;
+			var dalmuo = pirmas / antras;
+			
+			$("#skaiciavimai").append("<p>Suma: " + suma + "</p>");
+			$("#skaiciavimai").append("<p>Skirtumas: " + skirtumas + "</p>");
+			$("#skaiciavimai").append("<p>Sandauga: " + sandauga + "</p>");
+			$("#skaiciavimai").append("<p>Dalmuo: " + dalmuo + "</p>");
+		});
+	</script>
+</body>
+</html>
