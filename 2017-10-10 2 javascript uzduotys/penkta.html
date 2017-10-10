@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Penkta užduotis</title>
+	<style>
+		#blokas {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="widthInput">Plotis</label>
+		<input type="number" id="widthInput" value="100"><br>
+		<label for="heightInput">Aukštis</label>
+		<input type="number" id="heightInput" value="100"><br>
+		<label for="colorInput">Spalva</label>
+		<input type="text" id="colorInput" value="red">
+	</form>
+	
+	<br>
+	
+	<div id="blokas"></div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		$("#widthInput").on("change", function(){
+			$("#blokas").css({width: $("#widthInput").val()});
+		});
+		$("#heightInput").on("change", function(){
+			$("#blokas").css({height: $("#heightInput").val()});
+		});
+		$("#colorInput").on("change", function(){
+			$("#blokas").css({backgroundColor: $("#colorInput").val()});
+		});
+	</script>
+</body>
+</html>
