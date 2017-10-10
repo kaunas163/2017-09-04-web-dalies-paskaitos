@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript pagrindai</title>
+</head>
+<body>
+	<form>
+		<input type="text" placeholder="Jūsų vardas" id="vardasInput">
+	</form>
+	
+	<p id="tekstas"></p>
+	
+	<hr>
+	
+	<form id="zmogus">
+		<input type="text" placeholder="Vardas" id="vardasI">
+		<input type="text" placeholder="Pavarde" id="pavardeI">
+		<input type="number" min="1" placeholder="Amzius" id="amziusI">
+		<input type="submit" value="Gerai">
+	</form>
+	
+	<p id="informacija"></p>
+	
+	<script>
+		var a = 55;
+		var b = 95;
+		var suma = a + b;
+		console.log(suma);
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		//selektorius.on("veiksmas", function(){});
+		
+		$("#vardasInput").on("change", function(){
+			// kodas kuris bus vykdomas kai pasikeis laukelio reiksme
+			var vardas = $("#vardasInput").val();
+			$("#tekstas").prepend("Ivestas vardas: " + vardas + "<br>");
+		});
+	</script>
+	<script src="skriptai.js"></script>
+</body>
+</html>
+
+
+
+
