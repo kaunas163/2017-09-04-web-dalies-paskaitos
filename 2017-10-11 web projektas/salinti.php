@@ -33,7 +33,7 @@
 					<p><strong>ID:</strong> <?php echo $row["id"]; ?></p>
 					<p><strong>Autorius:</strong> <?php echo $row["autorius"]; ?></p>
 					<p><strong>Puslapių skaičius:</strong> <?php echo $row["puslapiuSk"]; ?></p>
-					<p><strong>Reitingas:</strong> <?php echo $row["reitingas"]; ?></p><a class="btn btn-default" role="button" href="index.php">Atgal </a></div>
+					<p><strong>Reitingas:</strong> <?php echo $row["reitingas"]; ?></p>
 					
 					<?php
 				}
@@ -42,9 +42,11 @@
 			}
 		
 		?>
-        <a class="btn btn-primary" role="button" href="#">Taip</a>
-        <a class="btn btn-default" role="button" href="#">Ne</a>
-        
+        <a class="btn btn-primary" role="button"
+        href="salinti_action.php?id=<?php echo $id; ?>">Taip</a>
+        <a class="btn btn-default" role="button" href="index.php">Ne</a>
+     
+	</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
