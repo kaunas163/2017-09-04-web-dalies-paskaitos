@@ -14,23 +14,26 @@
 <body>
     <div class="jumbotron">
         <div class="container">
-            <h1>Redaguojamas įrašas: {id/name/..}</h1></div>
+            <h1>Įrašo redagavimas</h1></div>
     </div>
     <div class="container">
-        <form>
+        <form action="redaguoti_action.php" method="get">
             <div class="form-group">
-                <label class="control-label" for="col1">Column 1</label>
-                <input class="form-control" type="text" value="reiksme is DB" id="col1">
+                <label class="control-label" for="col1">Autorius</label>
+                <input class="form-control" type="text" name="autorius" value="reiksme is DB" id="col1">
             </div>
             <div class="form-group">
-                <label class="control-label" for="col2">Column 2</label>
-                <input class="form-control" type="text" value="reiksme is DB" id="col2">
+                <label class="control-label" for="col2">Puslapių skaičius</label>
+                <input class="form-control" type="text" name="puslapiai" value="reiksme is DB" id="col2">
             </div>
             <div class="form-group">
-                <label class="control-label" for="col3">Column 3</label>
-                <input class="form-control" type="text" value="reiksme is DB" id="col3">
+                <label class="control-label" for="col3">Reitingas</label>
+                <input class="form-control" type="text" name="reitingas" value="reiksme is DB" id="col3">
             </div>
-            <div class="form-group"><a class="btn btn-primary" role="button" href="#">Gerai </a><a class="btn btn-default" role="button" href="index.html">Atšaukti </a></div>
+            <div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Gerai">
+				<a class="btn btn-default" role="button" href="index.php">Atšaukti</a>
+            </div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
