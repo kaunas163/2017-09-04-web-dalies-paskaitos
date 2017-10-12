@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<a href="#" class="btn btn-success">Naujas įrašas</a><br><br>
+			<a href="naujas.php" class="btn btn-success">Naujas įrašas</a><br><br>
 
 			<div class="table-responsive">
 				<table class="table table-striped table-bordered">

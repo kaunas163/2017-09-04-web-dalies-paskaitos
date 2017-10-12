@@ -17,20 +17,22 @@
             <h1>Naujas įrašas</h1></div>
     </div>
     <div class="container">
-        <form>
+        <form action="naujas_action.php" method="get">
             <div class="form-group">
-                <label class="control-label" for="col1">Column 1</label>
-                <input class="form-control" type="text" id="col1">
+                <label class="control-label" for="col1">Autorius</label>
+                <input class="form-control" type="text" name="autoriusInput" id="col1">
             </div>
             <div class="form-group">
-                <label class="control-label" for="col2">Column 2</label>
-                <input class="form-control" type="text" id="col2">
+                <label class="control-label" for="col2">Puslapių skaičius</label>
+                <input class="form-control" type="number" name="puslapiaiInput" id="col2">
             </div>
             <div class="form-group">
-                <label class="control-label" for="col3">Column 3</label>
-                <input class="form-control" type="text" id="col3">
+                <label class="control-label" for="col3">Reitingas</label>
+                <input class="form-control" type="number" name="reitingasInput" min="1" max="5" value="1" id="col3">
             </div>
-            <div class="form-group"><a class="btn btn-primary" role="button" href="#">Gerai </a><a class="btn btn-default" role="button" href="index.html">Atšaukti </a></div>
+            <div class="form-group">
+            	<input type="submit" value="Gerai" class="btn btn-success">
+            	<a class="btn btn-default" role="button" href="index.php">Atšaukti</a></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>

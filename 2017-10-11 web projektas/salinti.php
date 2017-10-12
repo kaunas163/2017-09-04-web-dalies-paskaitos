@@ -18,12 +18,33 @@
     </div>
     <div class="container">
         <p>Ar tikrai norite šalinti šį įrašą?</p>
-        <ul>
-            <li><strong>ID:</strong> reikšmė</li>
-            <li><strong>Column 1:</strong> reikšmė</li>
-            <li><strong>Column 2:</strong> reikšmė</li>
-            <li><strong>Column 3:</strong> reikšmė</li>
-        </ul><a class="btn btn-primary" role="button" href="#">Taip </a><a class="btn btn-default" role="button" href="#">Ne </a></div>
+        <?php
+			
+			$id = $_GET["id"]; // failas.php?id=reikšmė, gaunam id reikšmę
+		
+			$sql = "SELECT id, autorius, puslapiuSk, reitingas FROM filmai WHERE id=$id";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				// output data of each row
+				while($row = $result->fetch_assoc()) {
+					?>
+					
+					<p><strong>ID:</strong> <?php echo $row["id"]; ?></p>
+					<p><strong>Autorius:</strong> <?php echo $row["autorius"]; ?></p>
+					<p><strong>Puslapių skaičius:</strong> <?php echo $row["puslapiuSk"]; ?></p>
+					<p><strong>Reitingas:</strong> <?php echo $row["reitingas"]; ?></p><a class="btn btn-default" role="button" href="index.php">Atgal </a></div>
+					
+					<?php
+				}
+			} else {
+				echo "Įrašas su tokiu id nerastas";
+			}
+		
+		?>
+        <a class="btn btn-primary" role="button" href="#">Taip</a>
+        <a class="btn btn-default" role="button" href="#">Ne</a>
+        
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
