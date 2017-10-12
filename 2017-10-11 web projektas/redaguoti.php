@@ -17,24 +17,47 @@
             <h1>Įrašo redagavimas</h1></div>
     </div>
     <div class="container">
-        <form action="redaguoti_action.php" method="get">
+       
+       <?php
+			
+			$id = $_GET["id"]; // failas.php?id=reikšmė, gaunam id reikšmę
+		
+			$sql = "SELECT id, autorius, puslapiuSk, reitingas FROM filmai WHERE id=$id";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				// output data of each row
+				while($row = $result->fetch_assoc()) {
+					?>
+					
+					<form action="redaguoti_action.php?id=<?php echo $id; ?>" method="post">
             <div class="form-group">
                 <label class="control-label" for="col1">Autorius</label>
-                <input class="form-control" type="text" name="autorius" value="reiksme is DB" id="col1">
+                <input class="form-control" type="text" name="autorius" value="<?php echo $row["autorius"]; ?>" id="col1">
             </div>
             <div class="form-group">
                 <label class="control-label" for="col2">Puslapių skaičius</label>
-                <input class="form-control" type="text" name="puslapiai" value="reiksme is DB" id="col2">
+                <input class="form-control" type="text" name="puslapiai" value="<?php echo $row["puslapiuSk"]; ?>" id="col2">
             </div>
             <div class="form-group">
                 <label class="control-label" for="col3">Reitingas</label>
-                <input class="form-control" type="text" name="reitingas" value="reiksme is DB" id="col3">
+                <input class="form-control" type="text" name="reitingas" value="<?php echo $row["reitingas"]; ?>" id="col3">
             </div>
             <div class="form-group">
 				<input type="submit" class="btn btn-primary" value="Gerai">
 				<a class="btn btn-default" role="button" href="index.php">Atšaukti</a>
             </div>
         </form>
+					
+					<?php
+				}
+			} else {
+				echo "Įrašas su tokiu id nerastas";
+			}
+		
+		?>
+       
+        
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
